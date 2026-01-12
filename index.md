@@ -4,7 +4,7 @@ layout: home
 
 hero:
   # name: "ONIModTutorial"
-  name: '<span class="color-w">ONI</span> <span class="color-r">Mod</span> <span class="color-w">Tutorial</span>'
+  name: 'ONI <span class="color-r">Mod</span> Tutorial'
   text: "缺氧 MOD 教程"
   tagline: "Talk is cheap. Show me the code."
   actions:
