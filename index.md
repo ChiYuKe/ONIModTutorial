@@ -4,22 +4,25 @@ layout: home
 
 hero:
   name: "ONIMOdTutorial"
-  text: "这是缺氧教程"
-  tagline: My great project tagline
+  text: "缺氧 MOD 教程"
+  tagline: "Talk is cheap. Show me the code."
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: 开始阅读
+      link: /intro
     - theme: alt
       text: API Examples
-      link: /api-examples
+      # link: /api-examples
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: 零基础起步
+    details: 从环境搭建到 C# 基础，手把手带你进入缺氧 Mod 的底层世界。
+   
+  - title: 深入源码
+    details: 教你如何使用 dnSpy 剖析游戏代码，找到你想要修改的那个 Patch 点。
+   
+  - title: 持续更新
+    details: 保持对游戏版本的关注，记录每一份在坚持中诞生的 Mod 开发心得。
+   
 ---
 

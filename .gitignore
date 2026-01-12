@@ -1,0 +1,12 @@
+# 排除依赖库
+node_modules/
+
+# 排除编译输出
+dist/
+.temp/
+.cache/
+
+# 排除本地环境变量和日志
+*.log
+.DS_Store
+.env
