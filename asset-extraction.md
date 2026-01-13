@@ -41,12 +41,6 @@
 # 打包：将修改后的 SCML 重新编译为游戏可读的 KAnim
 .\kanimal-cli.exe kanim [file_name].scml
 
-# 解包
-./kanimal-cli scml [file_name].png [file_name]_anim.bytes [file_name]_build.bytes
-
-# 打包
-./kanimal-cli kanim [file_name].scml
-
 :::
 ---
 

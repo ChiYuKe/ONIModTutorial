@@ -15,11 +15,20 @@
 }
 
 
+.VPHero .name {
+  /* 撤销默认的渐变色背景 */
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  background-clip: initial !important;
+  -webkit-text-fill-color: initial !important;
+}
+
+
 /* 强制覆盖首页标题的渐变效果 */
 .VPHero .name span.color-w {
   background: none !important;
-  -webkit-text-fill-color: #ffffff !important; /* 白色 */
-  color: #ffffff !important;
+  -webkit-text-fill-color: initial !important; 
+  color: var(--vp-c-text-1) !important;
 }
 
 .VPHero .name span.color-r {

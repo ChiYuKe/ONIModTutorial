@@ -39,47 +39,66 @@ export default defineConfig({
           }
         ],
 
-    sidebar: [
-      {
-        text: '01. 项目概述',
-        collapsed: false,
-        items: [
-          { text: '开发引言', link: '/intro' },
-          { text: '开发环境配置', link: '/setup' },
-          { text: '游戏资产提取', link: '/asset-extraction' }, 
-          { text: '游戏源码分析工具', link: '/dnspy-guide' }
-        ]
-      },
-      {
-        text: '02. 核心开发',
-        collapsed: false,
-        items: [
-          { text: 'C# 基础与补丁语法', link: '/csharp-basics' },
-          { text: 'Mod结构', link: '/mod-structure' },
-          { text: '编译流程扩展', link: '/compile-and-debug' }
-        ]
-      },
-      {
-      text: '03. 游戏内容扩展',
-      collapsed: false,
-      items: [
-        { text: '新增建筑', link: '/content/buildings' },
-        { text: '新增植物', link: '/content/plants' },
-        { text: '新增物品：资源、消耗品与食物', link: '/content/items' },
-        { text: '新增生物', link: '/content/creatures' },
-        { text: '新增元素', link: '/content/elements' }
+    sidebar: {
+      // 1. 默认侧边栏：显示在根目录及基础章节
+      '/': [
+        {
+          text: '01. 项目概述',
+          collapsed: false,
+          items: [
+            { text: '开发引言', link: '/intro' },
+            { text: '开发环境配置', link: '/setup' },
+            { text: '游戏资产提取', link: '/asset-extraction' }, 
+            { text: '游戏源码分析工具', link: '/dnspy-guide' }
+          ]
+        },
+        {
+          text: '02. 核心开发',
+          collapsed: false,
+          items: [
+            { text: 'C# 基础与补丁语法', link: '/csharp-basics' },
+            { text: 'Mod 结构', link: '/mod-structure' },
+            { text: '编译流程扩展', link: '/compile-and-debug' }
+          ]
+        },
+        {
+          text: '03. 游戏内容扩展',
+          collapsed: true, // 在主站默认折叠，避免太长
+          items: [
+            { text: '新增建筑', link: '/content/buildings' },
+            { text: '新增植物', link: '/content/plants' },
+            { text: '新增物品', link: '/content/items' },
+            { text: '新增生物', link: '/content/creatures' },
+            { text: '新增元素', link: '/content/elements' }
+          ]
+        },
+        {
+          text: '04. 发布与维护',
+          collapsed: true,
+          items: [
+            { text: 'Steam Workshop 上传', link: '/steam-upload' },
+            { text: '多版本兼容性处理', link: '/compatibility' },
+            { text: '开源协议与社区规范', link: '/community' }
+          ]
+        }
+      ],
+
+      // 2. 内容扩展专用侧边栏
+      '/content/': [
+        {
+          text: '🏗️ 游戏内容扩展',
+          items: [
+            { text: '← 返回教程主页', link: '/intro' },
+            { text: '新增建筑 (Buildings)', link: '/content/buildings' },
+            { text: '新增植物 (Plants)', link: '/content/plants' },
+            { text: '新增物品 (Items)', link: '/content/items' },
+            { text: '新增生物 (Creatures)', link: '/content/creatures' },
+            { text: '新增元素 (Elements)', link: '/content/elements' }
+          ]
+        }
       ]
-      },
-      {
-        text: '04. 发布与维护',
-        collapsed: false,
-        items: [
-          { text: 'Steam Workshop 上传指南', link: '/steam-upload' },
-          { text: '多版本兼容性处理', link: '/compatibility' },
-          { text: '开源协议与社区规范', link: '/community' }
-        ]
-      }
-    ],
+    },
+
     editLink: {
       pattern: 'https://github.com/ChiYuKe/ONIModTutorial/edit/main/:path',
       text: '在 GitHub 上编辑此页'
