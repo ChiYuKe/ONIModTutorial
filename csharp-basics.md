@@ -10,7 +10,8 @@
 
 ### ✅ 开始
 
-* [C# 开发补充](./csharp-basics_.md) 章节。 <span id="back-point"></span>
+* [C# 开发补充](./csharp-basics-replenish.md)  <span id="back-point"></span>
+* [个人Harmony整理](./harmony-replenish.md)  <span id="back-point1"></span>
 * [Harmony文档](https://harmony.pardeike.net/articles/patching.html)。
 
 
