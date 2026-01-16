@@ -7,5 +7,4 @@ editLink: false
 感谢所有为本项目做出贡献的小伙伴！
 
 <Contributors repo="ChiYuKe/ONIModTutorial" />
-<Contributors repo="MaaAssistantArknights/MaaAssistantArknights" />
 
