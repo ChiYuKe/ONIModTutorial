@@ -4,16 +4,39 @@
 
 ## 1. 资源解包核心：AssetRipper
 
-**AssetRipper** 是目前处理 Unity 引擎资源最强大的开源工具之一。它不仅能提取静态贴图，还能在一定程度上还原 Unity 项目的资源目录结构。
+### 1. AssetRipper
+
+是目前处理 Unity 引擎资源最强大的开源工具之一。它不仅能提取静态贴图，还能在一定程度上还原 Unity 项目的资源目录结构。
 
 * **[📥 官方仓库 (GitHub Releases)](https://github.com/AssetRipper/AssetRipper/releases)**
 * **适用范围**：UI 图标（Sprite）、建筑贴图（Texture2D）、音频文件（AudioClip）... 。
 
-### 🛠️ 提取指南
-1.  **准备环境**：定位至游戏的资源目录，通常为 `.../OxygenNotIncluded/OxygenNotIncluded_Data`。
-2.  **载入资源**：运行 AssetRipper，将上述 `_Data` 文件夹整体拖入程序界面。
-3.  **资源导出**：在视图中，通过 `Export`导出全部资源。
-<Badge type="danger" text="注意" /> 不要导出成了Unity项目
+#### 🛠️ 提取指南
+
+* **载入资源：** 运行 `AssetRipper` ，选择游戏的 `OxygenNotIncluded_Data` 文件夹。
+* **资源导出：** 在视图中，通过 `Export`导出全部资源。
+
+### 2. AssetStudio
+如果你不需要还原整个项目，只想快速找到某几张特定的贴图、立绘或听一段音频，AssetStudio 是更高效的选择。它支持实时预览，让你在导出前就能看到资源内容。
+
+* **[📥 官方仓库 (GitHub Releases)](https://github.com/aelurum/AssetStudio/releases)** 
+
+* **适用范围**：快速筛选特定贴图、导出 3D 模型（Mesh）、预览动画片段... 。
+
+#### 🛠️ 提取指南
+* **载入资源：**  运行 `AssetStudioModGUI` ，点击菜单栏的 `File` -> `Load Folder` ，选择游戏的 `OxygenNotIncluded_Data` 文件夹。
+* **资源导出：** 点击 `Filter Type` 勾选你需要的类型（如 `Texture2D` `Sprite` `TexAsset`），最后 `Export` -> `Filtered assets` 导出勾选的类型
+
+
+
+### 💡 进阶技巧：如何选择工具？
+| 需求场景 | 推荐工具| 优势 |
+|----------|----------|----------|
+| 我想研究游戏的 UI 布局或逻辑 | `AssetRipper` | 能够尽可能还原 `.prefab` 和文件夹结构。 |
+| 我只想拿到动画纹理资源 | `AssetStudio` | 无需等待漫长的导出过程，导出方便 |
+
+
+
 
 ---
 

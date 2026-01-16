@@ -288,7 +288,8 @@ public static class Storage_Hard_Patch
 ### 💡 怎么选？
 
 * **三下划线 (`___`)**：**日常主力。** 只要能跑通，就优先用它，代码短且不容易写错。
-* **AccessTools**：**重型工具。** - 专门对付 `static private`（静态私有）变量。
+* **AccessTools**：**重型工具。** 
+  - 专门对付 `static private`（静态私有）变量。
   - 适合在补丁函数体外面拿取数据。
   - 如果你需要极致的性能优化，提前定义一个 `static readonly FieldInfo` 会比三下划线快那么一点点。
 ---
