@@ -62,7 +62,7 @@
 
 
 ::: tip 🚀 推荐：KAnim_GUI (可视化操作)
-**KAnim_GUI** 对 `kanimal-SE` 供了极简的图形化界面，支持快速解压和重组 KAnim，极大地降低了命令行操作的门槛。需要将 `kanimal-SE(kanimal-cli.exe)` 放入 `KAnim_GUI(KAnimGui.exe)` 同目录下才能正常工作
+**KAnim_GUI** 对 `kanimal-SE` 提供了极简的图形化界面，支持快速解压和重组 KAnim，极大地降低了命令行操作的门槛。需要将 `kanimal-SE(kanimal-cli.exe)` 放入 `KAnim_GUI(KAnimGui.exe)` 同目录下才能正常工作
 * **[📥 官方仓库 (KAnim_GUI)](https://github.com/ChiYuKe/KAnim_GUI)**
 
 :::

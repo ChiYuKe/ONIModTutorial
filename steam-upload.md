@@ -4,7 +4,7 @@
 
 ---
 
-## 1. 上传工具
+## 一 . 上传工具
 
 <div align="center">
   <img src="/images/steam-upload/Tool.png" alt="Mod上传工具" width="600" />
@@ -13,7 +13,7 @@
 
 ---
 
-## 2. 上传已有 Mod
+## 二 . 上传已有 Mod
 
 如果你需要发布的 Mod，请参考下方界面：
 

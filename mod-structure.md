@@ -2,7 +2,7 @@
 
 一个标准的《缺氧》Mod 目录通常包含以下核心文件。理解这些文件的角色是开发的第一步。
 
-## 1. 典型结构总览
+## 一 . 典型结构总览
 
 每个模组都使用一个单独文件夹，例如，你的`MyFirstMod`路径应该如下所示： 
 `...\Klei\OxygenNotIncluded\mods\Dev\MyFirstMod\`
@@ -17,7 +17,7 @@ MyFirstMod/
 └── preview.png             #  Steam 创意工坊显示的预览图
 
 ```
-## 2. 配置文件详解
+## 二 . 配置文件详解
 ::: code-group
 ```yaml [mod_info.yaml 模板]
 supportedContent: ALL       # 支持范围：VANILLA_ID, EXPANSION1_ID, 或 ALL
@@ -40,7 +40,7 @@ staticID: "AuthorName.MyMod"  # Mod 的唯一标识符（建议格式：作者�
 
 
 
-## 3. 资源与可选目录 (进阶)
+## 三 . 资源与可选目录 (进阶)
 当你的 Mod 不再仅仅是简单的逻辑修改，而是涉及新建筑、新美术或多语言支持时，需要建立以下目录结构：
 * **/translations/：** 用于存放多语言翻译文件（.pot 或 .po）。
 * **/anim/assets/：** 存放自定义建筑、生物或掉落物的动画资源。

@@ -193,6 +193,37 @@ public static class Overheatable_OverheatTemperature_Patch
 | **StaticConstructor** |前面带 static 的构造函数 | 专门用来修改游戏加载时就定死的全局静态常量 |
 | **Enumerator** | 里面有一堆 yield return 的方法 | 专门对付 ONI 里的异步动作、动画序列或那些不是瞬间完成的任务 |
 
+
+
+<h3 id="postfix-Overloading">5.3 处理重载</h3>
+在 ONI 源码中，经常会出现多个方法名相同但参数不同的方法。如果不指定参数类型，Harmony 会报错。
+
+**案例：拦截 `ModUtil.AddBuildingToPlanScreen`**
+这个方法在游戏源码中有多个重载版本，我们对比来看：
+
+```csharp
+public static class ModUtil
+{
+    // 重载 A：只有 2 个参数
+    public static void AddBuildingToPlanScreen(HashedString category, string building_id) { ... }
+
+    // 重载 B：有 3 个参数
+    public static void AddBuildingToPlanScreen(HashedString category, string building_id, string subcategoryID) { ... }
+
+    // 重载 c：有 5 个参数
+    public static void AddBuildingToPlanScreen(HashedString category, string building_id, string subcategoryID, string relativeBuildingId, ModUtil.BuildingOrdering ordering = ModUtil.BuildingOrdering.After) { ... }
+}
+
+// 【对应的 HarmonyPatch 写法】
+// 拦截“重载 B”，必须明确写出那 3 个参数的类型：
+[HarmonyPatch(typeof(ModUtil), "AddBuildingToPlanScreen", new Type[] { typeof(HashedString), typeof(string), typeof(string) })]
+// 试试举一反三 重载a会是怎么样的？
+
+// ❌ 错误写法
+[HarmonyPatch(typeof(ModUtil), "AddBuildingToPlanScreen")]
+
+```
+
 ---
 
 ### 🛠️ 总结：Prefix 与 Postfix 怎么选？

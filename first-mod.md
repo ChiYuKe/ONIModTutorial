@@ -4,7 +4,7 @@
 
 ---
 
-## 0. 准备工作
+## 一 . 准备工作
 
 在开始之前，你需要手动创建一个文件夹，用于存放你开发的 Mod 文件：
 * **路径**：`%USERPROFILE%\Documents\Klei\OxygenNotIncluded\mods\`
@@ -12,7 +12,7 @@
 
 ---
 
-## 1. 创建项目
+## 二 . 创建项目
 
 1.  打开 **Visual Studio 2022**。
 2.  选择 **创建新项目** -> 搜索 **类库 (.NET Framework)** -> 点击下一步。
@@ -21,7 +21,7 @@
 
 ---
 
-## 2. 导入游戏核心库 (References)
+## 三 . 导入游戏核心库 (References)
 
 你需要把游戏的 `.dll` 文件“介绍”给 Visual Studio，它才能理解游戏代码。
 
@@ -37,7 +37,7 @@
 
 ---
 
-## 3. 编写补丁代码
+## 四 . 编写补丁代码
 
 <!-- <a href="./harmony-replenish#postfix" class="guide-link">
   🚀 了解 Postfix 
@@ -98,7 +98,7 @@ namespace MyFirstMod
 `%USERPROFILE%\AppData\LocalLow\Klei\Oxygen Not Included\player.log`
 
 ---
-## 🎁 下载项目模板 (可选)
+## 🎁 五 . 下载项目模板 (可选)
 
 前面叽里咕噜没看懂？
 没关系，我这里提供了一份Mod模板，如果你是按教程来的，那么在这里我将默认你安装了Visual Studio 2026版本。
@@ -127,7 +127,7 @@ namespace MyFirstMod
 </details>
 
 
-## 4. 编译与部署
+## 六 . 编译与部署
 
 1. **生成 DLL**：点击顶部菜单栏的 **生成 (Build)** -> **生成解决方案**， 或者直接在 **解决方案资源管理器** 当中右键项目然后 **生成 (Build)**。
 2. **找到文件**：进入项目文件夹的 `bin/Debug` 目录，找到 `MyFirstMod.dll`。

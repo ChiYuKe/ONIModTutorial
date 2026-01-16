@@ -81,7 +81,15 @@ export default defineConfig({
             { text: '多版本兼容性处理', link: '/compatibility' },
             { text: '开源协议与社区规范', link: '/community' }
           ]
+        },
+                {
+          text: '05. 关于',
+          collapsed: true,
+          items: [
+            { text: '贡献者名单', link: '/about' },
+          ]
         }
+
       ],
 
       // 2. 内容扩展专用侧边栏
