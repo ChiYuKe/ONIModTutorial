@@ -87,6 +87,7 @@ export default defineConfig({
           collapsed: true,
           items: [
             { text: '贡献者名单', link: '/about' },
+            { text: '加入贡献', link: '/join' }
           ]
         }
 
