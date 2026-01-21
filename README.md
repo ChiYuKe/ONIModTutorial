@@ -1,9 +1,13 @@
-# ONIModTutorial
+<div align="center">
+  <h1>🧩 ONIModTutorial</h1>
+   
+  [![VitePress](https://img.shields.io/badge/Docs-VitePress-4FC08D)](https://vitepress.vuejs.org/)
 
-这是一个 **《缺氧（Oxygen Not Included）》Mod 开发教程仓库** 📘  
-用于系统性整理和分享 ONI Mod 制作相关的知识、经验和实战示例，适合 **从入门到进阶** 的学习者。
+  _📘 《缺氧（Oxygen Not Included）》Mod 开发教程 · 从入门到进阶 · 长期维护_
 
-本仓库以 **Markdown 文档** 为核心，可直接在 GitHub 阅读，也可配合 **VitePress** 构建成静态教程网站。
+</div>
+
+
 
 ---
 
@@ -51,23 +55,29 @@
 
 ---
 
-## 🚀 使用方式
+## 🚀 本地测试
 
 ### 直接阅读（推荐）
 - 直接在 GitHub 中按顺序阅读 `content` 目录下的 Markdown 文件即可
 
-### 本地运行文档站点（可选）
+### 本地测试运行文档站点（可选）
 
-1. 克隆仓库  
+1. 克隆仓库
+2. ```
    git clone https://github.com/ChiYuKe/ONIModTutorial.git
+   ```
 
-2. 安装依赖  
+3. 安装依赖
+4. ```
    npm install
+   ```
 
-3. 启动本地文档  
+5. 启动本地文档
+6. ```
    npm run dev
+   ```
 
-4. 浏览器访问终端提示的本地地址
+7. 浏览器访问终端提示的本地地址
 
 ---
 
