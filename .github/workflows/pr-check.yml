@@ -1,0 +1,67 @@
+name: PR Auto Checker
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+jobs:
+  test-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build Test
+        id: build
+        # 运行构建，如果失败会停止并进入下方的 failure 逻辑
+        run: npx vitepress build
+
+      - name: Comment on Failure
+        # 仅在构建步骤失败时运行
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const comment = `### ⚠️ 自动化测试未通过
+            
+            检测到 VitePress 构建过程中出现错误。请检查下方的 Action 日志并修复相关问题。
+            
+            **如何修复：**
+            1. 在本地运行 \`npm run build\` 确认错误信息。
+            2. 修复后直接推送（Push）到当前分支，我会重新进行测试。
+            
+            > 提示：在测试通过之前，维护者可能不会合并此 PR。`;
+            
+            github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: comment
+            });
+            
+      - name: Comment on Success
+        if: success()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: "✅ 自动化构建测试通过！感谢您的贡献，请等待维护者人工审核。"
+            });
