@@ -1,67 +1,36 @@
-name: PR Auto Checker
+name: PR Format Checker
 
 on:
-  pull_request:
+  pull_request_target: # 依然用这个，确保机器人有权评论
     branches: [main]
 
 permissions:
-  contents: write
+  contents: read
   pull-requests: write
-  issues: write
 
 jobs:
-  test-build:
+  lint:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha }}
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - name: Check Markdown Format
+        id: markdownlint
+        uses: davidanson/markdownlint-cli2-action@v16
         with:
-          node-version: 20
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build Test
-        id: build
-        # 运行构建，如果失败会停止并进入下方的 failure 逻辑
-        run: npx vitepress build
+          globs: "**/*.md"
 
       - name: Comment on Failure
-        # 仅在构建步骤失败时运行
         if: failure()
         uses: actions/github-script@v7
         with:
           script: |
-            const comment = `### ⚠️ 自动化测试未通过
-            
-            检测到 VitePress 构建过程中出现错误。请检查下方的 Action 日志并修复相关问题。
-            
-            **如何修复：**
-            1. 在本地运行 \`npm run build\` 确认错误信息。
-            2. 修复后直接推送（Push）到当前分支，我会重新进行测试。
-            
-            > 提示：在测试通过之前，维护者可能不会合并此 PR。`;
-            
             github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: context.issue.number,
-              body: comment
-            });
-            
-      - name: Comment on Success
-        if: success()
-        uses: actions/github-script@v7
-        with:
-          script: |
-            github.rest.issues.createComment({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: context.issue.number,
-              body: "✅ 自动化构建测试通过！感谢您的贡献，请等待维护者人工审核。"
+              body: "📑 **格式检查提醒**：检测到文档格式不规范（如标题空格、列表缩进等）。请参考 Action 日志修改，这有助于保持文档整洁！"
             });
