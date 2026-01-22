@@ -7,9 +7,6 @@ export default defineConfig({
   base: '/ONIModTutorial/',
   title: "ONIModTutorial",
   description: "缺氧MOD教程",
-  
-
-
 
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
@@ -83,11 +80,14 @@ export default defineConfig({
           ]
         },
                 {
-          text: '05. 关于',
+          text: '05. 其他',
           collapsed: true,
           items: [
             { text: '贡献者名单', link: '/about' },
-            { text: '加入贡献', link: '/join' }
+            { text: '加入贡献', link: '/join' },
+            { text: '新闻公告', link: '/news' },
+            { text: '创意工坊', link: '/WorkshopList' }
+
           ]
         }
 
@@ -122,7 +122,8 @@ export default defineConfig({
         dateStyle: 'full',
         timeStyle: 'medium'
       }
-    }
+    },
+
     
 
   }
