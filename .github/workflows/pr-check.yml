@@ -6,6 +6,7 @@ on:
       - main
       - master
 
+
 permissions:
   contents: read
   pull-requests: write
@@ -24,7 +25,7 @@ jobs:
           node-version: 20
           cache: npm
 
-      - name: Install dependencies
+      - name: Install deps
         run: npm ci
 
       - name: Build
