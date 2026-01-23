@@ -6,6 +6,10 @@ on:
       - main
       - master
 
+permissions:
+  contents: read
+  pull-requests: write
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -17,24 +21,40 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 18
           cache: npm
 
-      - name: Install deps
+      - name: Install dependencies
         run: npm ci
 
       - name: Build
-        run: npm run build
+        run: |
+          npm run build 2>&1 | tee build.log
 
-      # 👇 失败时评论
-      - name: Comment on failure
+      - name: Extract error summary
+        if: failure()
+        run: |
+          echo "### ❌ CI 构建失败" > error_summary.md
+          echo "" >> error_summary.md
+          echo "**可能的错误位置（前 10 条）：**" >> error_summary.md
+          echo "" >> error_summary.md
+
+          grep -E "(/|\\w).*\\.(js|ts|vue|md|json|yaml|yml):[0-9]+" build.log \
+            | sed 's/^/- /' \
+            | head -n 10 >> error_summary.md \
+            || echo "- ❗ 未能解析出具体文件和行号，请查看完整日志" >> error_summary.md
+
+          echo "" >> error_summary.md
+          echo "👉 请点击 **Checks** 查看完整错误上下文" >> error_summary.md
+
+      - name: Comment on PR failure
         if: failure()
         uses: marocchino/sticky-pull-request-comment@v2
         with:
-          message: |
-            ❌ **CI 检查未通过**
+          path: error_summary.md
 
-            请修复以下问题后重新提交 PR：
-            - 构建或测试未通过
-
-            👉 请点击 **Checks** 查看详细错误日志
+      - name: Remove failure comment on success
+        if: success()
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          delete: true
