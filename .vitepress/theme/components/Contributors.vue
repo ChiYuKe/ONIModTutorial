@@ -4,7 +4,6 @@
       <a :href="user.html_url" target="_blank" rel="noreferrer">
         <img :src="user.avatar_url" :alt="user.login" class="avatar" />
         <span class="username">{{ user.login }}</span>
-      </a>
     </div>
   </div>
 </template>
@@ -68,7 +67,7 @@ onMounted(async () => {
 }
 
 .avatar {
-  width: 60px;
+  with: 60px;
   height: 60px;
   border-radius: 50%;
   border: 2px solid var(--vp-c-brand);
