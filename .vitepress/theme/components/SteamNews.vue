@@ -53,7 +53,7 @@ function showTooltip(e, item) {
 
 
 
-  const estimatedHeight =
+  cost estimatedHeight =
     tooltip.lines.length * LINE_HEIGHT + PADDING
 
   let top
@@ -115,7 +115,7 @@ onMounted(async () => {
 
 
 
-<template>
+<tempate>
   <div class="steam-container">
     <div v-if="loading" class="loading">
       正在同步 Steam 补丁说明...
