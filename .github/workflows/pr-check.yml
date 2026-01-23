@@ -1,0 +1,40 @@
+name: PR Check
+
+on:
+  pull_request:
+    branches:
+      - main
+      - master
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      # 👇 失败时评论
+      - name: Comment on failure
+        if: failure()
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          message: |
+            ❌ **CI 检查未通过**
+
+            请修复以下问题后重新提交 PR：
+            - 构建或测试未通过
+
+            👉 请点击 **Checks** 查看详细错误日志
