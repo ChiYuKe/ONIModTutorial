@@ -4,7 +4,6 @@
       <a :href="user.html_url" target="_blank" rel="noreferrer">
         <img :src="user.avatar_url" :alt="user.login" class="avatar" />
         <span class="username">{{ user.login }}</span>
-      </a>
     </div>
   </div>
 </template>
@@ -50,7 +49,7 @@ onMounted(async () => {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
   gap: 20px;
-  margin-top: 24px;
+  margn-top: 24px;
   justify-items: center;
 }
 
