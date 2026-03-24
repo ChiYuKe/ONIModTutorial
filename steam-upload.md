@@ -38,16 +38,27 @@
 :::
 
 ## 三 . 创意工坊 图片、标题与描述
-
-<div align="center">
-  <img src="/images/steam-upload/Tool_2.png" alt="发布界面" width="600" />
-</div>
-
 * <Badge type="danger" text="1" /> **编辑标题与描述**：多国语言版本标题与描述
   **常用标签
-  <ul>
-    <li>标题：[h1][/h1]..[h*][/h*] [url=*][/url] [hr/]</li>
-    <li>链接：[url=链接]链接[/url] [img=链接]图片[/img]</li>
-    <li>分隔符：[hr/]</li>
-  </ul>
+  ```html
+    <!-- 标题 -->
+    [h1][/h1]..[h*][/h*] [url=*][/url] [hr/]
+    <!-- 链接 -->
+    [url=链接]链接[/url] [img=链接]图片[/img]
+    <!-- 分隔符 -->
+    [hr/]
+    <!-- 表格 -->
+    [table]
+    [tr]
+    [td]单元格内容[/td]
+    [tr]
+    [table/]
+    <!-- 列表 -->
+    [list]
+    [*]列表项1[/*]
+    [*]列表项2[/*]
+    [list/]
+    <!-- 换行 -->
+    [br/>
+  ```
 * <Badge type="danger" text="2" /> **添加编辑图片/视频**：图片尺寸比例1920/1080
