@@ -55,8 +55,9 @@ export default defineConfig({
           items: [
             { text: 'C# 基础与补丁语法', link: '/csharp-basics' },
             { text: 'Mod 结构', link: '/mod-structure' },
-             { text: '第一个Mod', link: '/first-mod' },
-            { text: '编译流程扩展', link: '/compile-and-debug' }
+            { text: '第一个Mod', link: '/first-mod' },
+            { text: '编译流程扩展', link: '/compile-and-debug' },
+            { text: 'Unity篇', link: '/resource-unity' }
           ]
         },
         {
