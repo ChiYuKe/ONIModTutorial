@@ -15,9 +15,9 @@
 ## 二 . 创建项目
 
 1.  打开 **Visual Studio 2022**。
-2.  选择 **创建新项目** -> 搜索 **类库 (.NET Framework)** -> 点击下一步。
+2.  选择 **创建新项目** -> 搜索 **类库**（建议选择支持 **.NET Standard 2.1** 的类库模板）-> 点击下一步。
 3.  **项目名称**：输入 `MyFirstMod`。
-4.  **框架**：务必选择 **.NET Framework 4.7.1**。
+4.  **目标框架**：务必选择 **.NET Standard 2.1**。
 
 ---
 
@@ -68,7 +68,7 @@
 </style> -->
 ::: info 进阶指引
 想要进一步了解补丁？请点击阅读：
-[了解 Postfix →](./harmony-replenish.md#postfix)
+[了解 Postfix →](./harmony-reference.md#postfix)
 :::
 删除项目自动生成的 `Class1.cs` 里的所有内容，粘贴下面的代码：
 

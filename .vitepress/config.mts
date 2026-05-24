@@ -43,10 +43,10 @@ export default defineConfig({
           text: '01. 项目概述',
           collapsed: false,
           items: [
-            { text: '开发引言', link: '/intro' },
-            { text: '开发环境配置', link: '/setup' },
+            { text: '开发引言', link: '/preface' },
+            { text: '开发环境配置', link: '/development-environment' },
             { text: '游戏资产提取', link: '/asset-extraction' }, 
-            { text: '游戏源码分析工具', link: '/dnspy-guide' }
+            { text: '游戏源码分析工具', link: '/dnspy-analysis' }
           ]
         },
         {
@@ -55,8 +55,8 @@ export default defineConfig({
           items: [
             { text: 'C# 基础与补丁语法', link: '/csharp-basics' },
             { text: 'Mod 结构', link: '/mod-structure' },
-            { text: '第一个Mod', link: '/first-mod' },
-            { text: '编译流程扩展', link: '/compile-and-debug' },
+            { text: '第一个Mod', link: '/first-mod-tutorial' },
+            { text: '编译流程扩展', link: '/build-and-debug' },
             { text: 'Unity篇', link: '/resource-unity' }
           ]
         },
@@ -75,19 +75,19 @@ export default defineConfig({
           text: '04. 发布与维护',
           collapsed: true,
           items: [
-            { text: 'Steam Workshop 上传', link: '/steam-upload' },
-            { text: '多版本兼容性处理', link: '/compatibility' },
-            { text: '开源协议与社区规范', link: '/community' }
+            { text: 'Steam Workshop 上传', link: '/steam-workshop-upload' },
+            { text: '多版本兼容性处理', link: '/version-compatibility' },
+            { text: '开源协议与社区规范', link: '/community-guidelines' }
           ]
         },
-                {
+        {
           text: '05. 其他',
           collapsed: true,
           items: [
-            { text: '贡献者名单', link: '/about' },
-            { text: '加入贡献', link: '/join' },
-            { text: '新闻公告', link: '/news' },
-            { text: '创意工坊', link: '/WorkshopList' }
+            { text: '贡献者名单', link: '/contributors' },
+            { text: '加入贡献', link: '/contribute' },
+            { text: '新闻公告', link: '/announcements' },
+            { text: '创意工坊', link: '/workshop-list' }
 
           ]
         }
@@ -99,7 +99,7 @@ export default defineConfig({
         {
           text: '🏗️ 游戏内容扩展',
           items: [
-            { text: '← 返回教程主页', link: '/intro' },
+            { text: '← 返回教程主页', link: '/preface' },
             { text: '新增建筑 (Buildings)', link: '/content/buildings' },
             { text: '新增植物 (Plants)', link: '/content/plants' },
             { text: '新增物品 (Items)', link: '/content/items' },

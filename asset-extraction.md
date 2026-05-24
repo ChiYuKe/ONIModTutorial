@@ -100,7 +100,7 @@
   <p style="font-size: 1.1rem; font-style: italic; color: var(--vp-c-text-2); margin-bottom: 1.5rem;">
     “逻辑是生存的第一步，而代码是改写规则的起点。”
   </p>
-    <a href="dnspy-guide">
+    <a href="dnspy-analysis">
     <button style="background: var(--vp-c-brand-1); color: white; padding: 10px 24px; border-radius: 20px; font-weight: bold; cursor: pointer; border: none;">
      游戏源码工具 →
     </button>

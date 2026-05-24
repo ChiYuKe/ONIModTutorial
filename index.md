@@ -10,7 +10,7 @@ hero:
   actions:
     - theme: brand
       text: 开始阅读
-      link: /intro
+      link: /preface
     - theme: alt
       text: API Examples
       # link: /api-examples

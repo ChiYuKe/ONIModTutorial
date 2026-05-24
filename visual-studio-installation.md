@@ -1,7 +1,7 @@
 ---
 sidebar: false
 ---
-<a href="./setup#back-point" style="
+<a href="./development-environment#back-point" style="
   position: fixed;
   left: 20px;
   top: 100px;
@@ -21,7 +21,7 @@ sidebar: false
   <span style="font-size: 1.2em;">返回</span> 
 </a>
 
-# 🛠️ Visual Studio 2026 安装细节
+# 🛠️ Visual Studio 安装细节
 
 在安装过程中，正确的勾选决定了你是否能顺利编译 Mod。请参考以下图解进行配置：
 
@@ -37,15 +37,15 @@ sidebar: false
 ---
 
 ### 2. 精确勾选组件 (Individual Components)
-这是最关键的一步，很多新手会因为缺了这个组件而找不到 4.7.1 框架。
+这是最关键的一步，很多新手会因为少勾选组件而无法创建合适的项目模板。
 
 <div align="center">
   <img src="/images/VSInstallation-details/VSInstall_.png" alt="选择组件" width="600" />
 </div>
 
 **必须确保以下项已勾选：**
-* **.NET Framework 4.7.1 开发人员工具**：用于编写针对《缺氧》的代码。
-* **.NET Framework 4.7.1 目标包**：提供程序集的引用支持。
+* **.NET 桌面开发相关组件**：用于编写针对《缺氧》的代码。
+* **.NET Standard 2.1 相关开发支持**：提供项目模板和程序集引用支持。
 
 ---
 
@@ -53,5 +53,5 @@ sidebar: false
 确认右下角的安装位置有足够的空间（通常需要几 GB），点击 **“修改”** 或 **“安装”**。安装完成后，建议重启电脑以确保环境变量生效。
 
 ::: tip 下一步
-安装完成后，你可以回到 [开发环境搭建](./setup#back-point) 继续学习如何创建你的第一个 Mod 项目。
+安装完成后，你可以回到 [开发环境搭建](./development-environment#back-point) 继续学习如何创建你的第一个 Mod 项目。
 :::

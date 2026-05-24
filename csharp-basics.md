@@ -14,8 +14,8 @@
 如果不知道什么是 `空间命名（namespace）` `类名（Class）` `方法名（Method）` 是什么的，在这里你就可以止步了，可以花点时间快速了解一下 `C#` ，这会让你后续的开发事半功倍。
 :::
 
-* [C# 杂七杂八](./csharp-basics-replenish.md) 
-* [Harmony的小整理](./harmony-replenish.md)  
+* [C# 杂七杂八](./csharp-basics-reference.md) 
+* [Harmony的小整理](./harmony-reference.md)  
 * [Harmony官方文档](https://harmony.pardeike.net/articles/patching.html)。
 
 ---
@@ -49,7 +49,7 @@
 * **方法名 (Method)**：看括号左边的那个单词。
     * 源码：`public static void LoadGeneratedBuildings(...)`
     * 对应参数：**`"LoadGeneratedBuildings"`**
-* **参数类型 (Parameters)**：看括号里面的内容，如果是[重载](./harmony-replenish.md#postfix-Overloading)方法则需要提取。
+* **参数类型 (Parameters)**：看括号里面的内容，如果是[重载](./harmony-reference.md#postfix-Overloading)方法则需要提取。
     * 源码：`(ICollection<Type> types)`
     * 对应参数：**`new Type[] { typeof(ICollection<Type>) }`**
 
