@@ -46,7 +46,8 @@ export default defineConfig({
             { text: '开发引言', link: '/preface' },
             { text: '开发环境配置', link: '/development-environment' },
             { text: '游戏资产提取', link: '/asset-extraction' }, 
-            { text: '游戏源码分析工具', link: '/dnspy-analysis' }
+            { text: '游戏源码分析工具', link: '/dnspy-analysis' },
+            { text: '开启 ImGui DevTools', link: '/devtools-imgui' }
           ]
         },
         {
