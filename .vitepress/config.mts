@@ -57,6 +57,7 @@ export default defineConfig({
             { text: 'C# 基础与补丁语法', link: '/csharp-basics' },
             { text: 'Mod 结构', link: '/mod-structure' },
             { text: '第一个Mod', link: '/first-mod-tutorial' },
+            { text: 'StorageNetwork 制作案例', link: '/storage-network-tutorial' },
             { text: '编译流程扩展', link: '/build-and-debug' },
             { text: 'Unity篇', link: '/resource-unity' }
           ]
